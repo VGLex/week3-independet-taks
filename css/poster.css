@@ -35,8 +35,53 @@ html {
 .movie-poster-container img {
     margin-top: 2rem;
     height: 500px;
-    border-radius:5px;
+    width: 350px;
+    border-radius:6px;
     box-sizing: border-box;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(37, 36, 36, 0.61);
+    z-index: 2;
+    top: 0;
+    left: 0;
+    text-align: center;
+}
+
+
+
+.modal-content {
+    background-color: blanchedalmond;
+    margin: 5% auto;
+    padding: 5rem;
+    width: 600px;
+    height: 700px;
+    animation: zoom-in 1s;
+    text-transform: uppercase;
+}
+
+@keyframes zoom-in {
+    0% {transform: scale(0);}
+    100% {transform: scale(1);}
+}
+
+.closeBnt {
+    float: right;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.movie-poster-card {
+    width: 350px;
+}
+
+.movie-poster {
+    width: 300px;
+    cursor: pointer;
 }
 
 .movie-poster-container img:hover {
