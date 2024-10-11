@@ -105,7 +105,7 @@ html {
     content:"\2022 ";
 }
 
-.movie-info-container > *:not(.movie-info-quote){
+.movie-info-container > *:not(.movie-info-quote, .container-carousel){
     opacity: 0;
     animation: fade-in 3.5s ease-in-out forwards;
     animation-delay: 1s;
@@ -135,6 +135,62 @@ html {
 .movie-info-overview-title {
     text-transform: capitalize;
     letter-spacing: 0.1rem;
+}
+
+.container-carousel {
+    width: 75%;
+    text-align: center;
+    margin: 2rem auto;
+}
+
+.carousel {
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.carousel img {
+    width: 100%;
+}
+
+.carousel .carousel__item,
+.carousel .carousel__item--hidden {
+    display: none;
+}
+
+
+
+.carousel .carousel__item--visible {
+    display: block;
+    animation: fadeIn 0.6s;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.carousel .carousel__actions {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel .carousel__actions button {
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    height: 50px;
+    width: 50px;
+    border: 0;
+    background-color: rgba(87, 69, 69, 0.61);
+    font-size: 1.75rem;
+    color: #fff;
+    margin: 0.5rem;
+
 }
 
 .movie-info-actions {
@@ -192,3 +248,4 @@ footer ul li a {
     text-decoration: none;
     color: #777;
 }
+
